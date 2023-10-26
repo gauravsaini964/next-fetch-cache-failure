@@ -2,18 +2,6 @@ import Image from "next/image";
 
 import getRootNavData from "@/app/_api/navigation-data";
 
-// async function getRootNavData() {
-//   console.log("nav");
-//   const res = await fetch("http://127.0.0.1:8000/api/v1/cart/strapi/proxy", { cache: "force-cache" });
-//   // const { data: homepageData } = await getCmsData();
-//   // Recommendation: handle errors
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-//   return res.json();
-// }
-
 export async function generateMetadata({ params }, parent) {
   const { data: navData } = await getRootNavData();
 }
